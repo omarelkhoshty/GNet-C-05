@@ -133,6 +133,28 @@ namespace GNet_C_05
 
     #region Question 6
     //Given int genreNumber = 1;, cast it into a Genre value and print the result. 
+    //enum Genre
+    //{
+    //    Fiction,
+    //    NonFiction,
+    //    Science
+    //}
+
+    //internal class Program
+    //{
+    //    static void Main(string[] args)
+    //    {
+    //        int genreNumber = 1;
+
+    //        Genre g = (Genre)genreNumber; 
+    //        Console.WriteLine(g);           
+
+    //    }
+    //}
+    #endregion
+
+    #region Question 7
+    // Q07: Given Genre genre = Genre.Fiction;, convert it into a string using ToString() and print it.
     enum Genre
     {
         Fiction,
@@ -144,15 +166,14 @@ namespace GNet_C_05
     {
         static void Main(string[] args)
         {
-            int genreNumber = 1;
+            Genre genre = Genre.Fiction;
 
-            Genre g = (Genre)genreNumber; 
-            Console.WriteLine(g);           
+            string genreText = genre.ToString();
+            Console.WriteLine(genreText);          
 
         }
     }
     #endregion
-
 
 
 

@@ -35,10 +35,33 @@
     #endregion
 
     #region Question 2
-    //Add an internal int copiesInStock = 5; field to Book. Print it from Main. Does it compile? Why?
+    ////Add an internal int copiesInStock = 5; field to Book. Print it from Main. Does it compile? Why?
+    //class Book
+    //{
+    //    internal int copiesInStock = 5;
+    //}
+
+    //internal class Program
+    //{
+    //    static void Main(string[] args)
+    //    {
+    //        Book b = new Book();
+
+    //        Console.WriteLine(b.copiesInStock);   // prints 5
+
+    //        // Yes, it compiles.
+    //        // Why: internal means the member is accessible anywhere in the SAME assembly (project).
+    //        // Book and Program are in the same project, so Main can access copiesInStock.
+    //        // Code in a different project/assembly could NOT access it.
+    //    }
+    //}
+    #endregion
+
+    #region Question 3
+    //Q03: Add a public string Title; field to Book. Set it and print it from Main
     class Book
     {
-        internal int copiesInStock = 5;
+        public string Title;
     }
 
     internal class Program
@@ -47,12 +70,8 @@
         {
             Book b = new Book();
 
-            Console.WriteLine(b.copiesInStock);   // prints 5
-
-            // Yes, it compiles.
-            // Why: internal means the member is accessible anywhere in the SAME assembly (project).
-            // Book and Program are in the same project, so Main can access copiesInStock.
-            // Code in a different project/assembly could NOT access it.
+            b.Title = "Clean Code";
+            Console.WriteLine(b.Title);
         }
     }
     #endregion
@@ -60,6 +79,5 @@
 
 
 
-
-
+ 
 }

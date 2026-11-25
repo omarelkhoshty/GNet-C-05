@@ -178,6 +178,28 @@ namespace GNet_C_05
     #region Question 8
     // Q08: Given string genreText = "Science";, convert it into a Genre value using Enum.Parse() and print the result.
 
+    //enum Genre
+    //{
+    //    Fiction,
+    //    NonFiction,
+    //    Science
+    //}
+
+    //internal class Program
+    //{
+    //    static void Main(string[] args)
+    //    {
+    //        string genreText = "Science";
+
+    //        Genre genre = (Genre)Enum.Parse(typeof(Genre), genreText);   
+    //        Console.WriteLine(genre);                                   
+    //    }
+    //}
+    #endregion
+
+    #region Question 9
+    // Q09: Given string genreText = "Mystery"; (not a valid Genre value), use Enum.TryParse() to attempt the conversion. Print "Unknown genre" if it fails.
+
     enum Genre
     {
         Fiction,
@@ -189,10 +211,17 @@ namespace GNet_C_05
     {
         static void Main(string[] args)
         {
-            string genreText = "Science";
+            string genreText = "Mystery";
 
-            Genre genre = (Genre)Enum.Parse(typeof(Genre), genreText);   
-            Console.WriteLine(genre);                                   
+            if (Enum.TryParse(genreText, out Genre genre))
+            {
+                Console.WriteLine(genre);
+            }
+            else
+            {
+                Console.WriteLine("Unknown genre"); 
+            }
+
         }
     }
     #endregion

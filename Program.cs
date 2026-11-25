@@ -82,6 +82,36 @@ namespace GNet_C_05
     #region Question 4
     //Declare an enum Genre { Fiction, NonFiction, Science }. Add a Genre property to Book, assign it Genre.Science, and print it.
 
+    //enum Genre
+    //{
+    //    Fiction,
+    //    NonFiction,
+    //    Science
+    //}
+
+    //class Book
+    //{
+    //    public Genre Genre { get; set; } 
+    //}
+
+    //internal class Program
+    //{
+    //    static void Main(string[] args)
+    //    {
+    //        Book b = new Book();
+
+    //        b.Genre = Genre.Science;           
+    //        Console.WriteLine(b.Genre);  
+
+
+    //        Console.WriteLine((int)b.Genre); 
+    //    }
+    //}
+    #endregion
+
+    #region Question 5
+    //Using the Genre enum above, print the underlying int value of Genre.Fiction, Genre.NonFiction, and Genre.Science by casting each to int. 
+
     enum Genre
     {
         Fiction,
@@ -89,22 +119,14 @@ namespace GNet_C_05
         Science
     }
 
-    class Book
-    {
-        public Genre Genre { get; set; } 
-    }
-
     internal class Program
     {
         static void Main(string[] args)
         {
-            Book b = new Book();
+            Console.WriteLine((int)Genre.Fiction);      
+            Console.WriteLine((int)Genre.NonFiction);   
+            Console.WriteLine((int)Genre.Science);      
 
-            b.Genre = Genre.Science;           
-            Console.WriteLine(b.Genre);  
-
-            
-            Console.WriteLine((int)b.Genre); 
         }
     }
     #endregion

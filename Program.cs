@@ -1,4 +1,7 @@
-﻿namespace GNet_C_05
+﻿using GNet_C_05;
+using System.Drawing;
+
+namespace GNet_C_05
 {
     #region Question 1
     //Q01:Add a private string password = "secret"; field to a Book class. Try to print it from Main (outside the class). What happens, and why?
@@ -59,9 +62,36 @@
 
     #region Question 3
     //Q03: Add a public string Title; field to Book. Set it and print it from Main
+    //class Book
+    //{
+    //    public string Title;
+    //}
+
+    //internal class Program
+    //{
+    //    static void Main(string[] args)
+    //    {
+    //        Book b = new Book();
+
+    //        b.Title = "Clean Code";
+    //        Console.WriteLine(b.Title);
+    //    }
+    //}
+    #endregion
+
+    #region Question 4
+    //Declare an enum Genre { Fiction, NonFiction, Science }. Add a Genre property to Book, assign it Genre.Science, and print it.
+
+    enum Genre
+    {
+        Fiction,
+        NonFiction,
+        Science
+    }
+
     class Book
     {
-        public string Title;
+        public Genre Genre { get; set; } 
     }
 
     internal class Program
@@ -70,8 +100,11 @@
         {
             Book b = new Book();
 
-            b.Title = "Clean Code";
-            Console.WriteLine(b.Title);
+            b.Genre = Genre.Science;           
+            Console.WriteLine(b.Genre);  
+
+            
+            Console.WriteLine((int)b.Genre); 
         }
     }
     #endregion
@@ -79,5 +112,5 @@
 
 
 
- 
+
 }
